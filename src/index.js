@@ -3,6 +3,7 @@ const Message = require('./Classes/Message');
 const TextChannel = require('./Classes/TextChannel');
 const DMChannel = require('./Classes/DMChannel');
 const MessageButton = require('./Classes/MessageButton');
+const ButtonCollector = require('./Classes/ButtonCollector');
 const INTERACTION_CREATE = require('./Classes/INTERACTION_CREATE.js');
 
 module.exports = (client) => {
@@ -27,8 +28,10 @@ module.exports = (client) => {
     });
 
     return {
-        MessageButton: MessageButton
+        MessageButton: MessageButton,
+        ButtonCollector: ButtonCollector
     };
 }
 
 module.exports.MessageButton = MessageButton;
+module.exports.ButtonCollector = ButtonCollector
